@@ -1,7 +1,5 @@
 export default async function Home() {
-  const { signal } = new AbortController();
   const aa = await fetch("https://worldtimeapi.org/api/timezone/Asia/Tokyo")
-    // const aa = await fetch("https://worldtimeapi.org/api/timezone/Asia/Tokyo",{signal})
     .then((a) => a.json())
     .catch((a) => a.json());
 
@@ -14,7 +12,6 @@ export default async function Home() {
   return (
     <main className="">
       <p>現在時刻：{new Date().toLocaleString()}</p>
-
       <p>{aa.datetime}</p>
       <p>{bb.datetime}</p>
     </main>
