@@ -1,3 +1,5 @@
+import Transit from "./client/transit";
+
 export default async function Home() {
   const aa = await fetch("https://worldtimeapi.org/api/timezone/Asia/Tokyo")
     .then((a) => a.json())
@@ -14,6 +16,8 @@ export default async function Home() {
       <p>現在時刻：{new Date().toLocaleString()}</p>
       <p>{aa.datetime}</p>
       <p>{bb.datetime}</p>
+
+      <Transit />
     </main>
   );
 }
