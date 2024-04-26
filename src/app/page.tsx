@@ -1,3 +1,5 @@
+import Transit from "../component/transit";
+
 export default async function Home() {
   const { signal } = new AbortController();
   const aa = await fetch("https://worldtimeapi.org/api/timezone/Asia/Tokyo")
@@ -13,10 +15,14 @@ export default async function Home() {
 
   return (
     <main className="">
+      <h1>サーバーコンポーネント</h1>
       <p>現在時刻：{new Date().toLocaleString()}</p>
 
       <p>{aa.datetime}</p>
       <p>{bb.datetime}</p>
+      <br />
+      <br />
+      <Transit />
     </main>
   );
 }
