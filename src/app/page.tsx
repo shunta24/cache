@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main className="">
       <h1>サーバーコンポーネント</h1>
-      <p>現在時刻：{new Date().toLocaleString()}</p>
+      <p>現在時刻：{new Date().toString()}</p>
 
       <p>{aa.datetime}</p>
       <p>{bb.datetime}</p>
