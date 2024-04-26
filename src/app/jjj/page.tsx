@@ -24,6 +24,7 @@ const UseApiRoute = () => {
 
   return (
     <div>
+      <p>現在時刻：{new Date().toLocaleString()}</p>
       <p>GET通信</p>
       <p>{cc.get}</p>
       <p>POST通信</p>

@@ -21,6 +21,7 @@ export default function Home() {
 
   return (
     <main className="">
+      <p>現在時刻：{new Date().toLocaleString()}</p>
       <p>{cc.s}</p>
       <p>{cc.k}</p>
       <button onClick={v}>更新</button>
